@@ -4,9 +4,9 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-void _putchar(char c);
+int _putchar(char c);
 void _puts(char *str);
 int _strlen(char *s);
-int _printf(*format, ...);
+int _printf(const char *format, ...);
 
 #endif

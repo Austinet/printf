@@ -4,9 +4,10 @@
  * @format: a pointer to a string
  * Return: length of the string
  */
-int _printf(char *format, ...)
+int _printf(const char *format, ...)
 {
-int i, length = 0, char *str;
+int i, length = 0;
+char *str;
 va_list args;
 va_start(args, format);
 
@@ -18,8 +19,7 @@ if (format[i] == '\0')
 return (length);
 
 _putchar(format[i]);
-length++;
-i++;
+length++, i++;
 }
 i++;
 
