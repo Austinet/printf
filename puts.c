@@ -2,15 +2,18 @@
 /**
  * _puts - prints a string to standard output
  * @str: string to be printed
- * Return: Always 0
+ * Return: lenght of string
  */
-void _puts(char *str)
+int _puts(char *str)
 {
 int i = 0;
 
+if (str == NULL)
+	str = "(null)";
 while (str[i] != '\0')
 {
 _putchar(str[i]);
 i++;
 }
+return (i);
 }
