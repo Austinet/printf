@@ -23,7 +23,7 @@ else
 {
 if (format[++i] == '\0')
 return (-1);
-switch (format[i++])
+switch (format[i])
 {
 case 'c':
 _putchar((char) va_arg(args, int));
@@ -40,7 +40,7 @@ length++;
 break;
 default:
 _putchar('%');
-_putchar(format[--i]);
+_putchar(format[i]);
 }
 }
 }
